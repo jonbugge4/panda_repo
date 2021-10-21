@@ -48,16 +48,29 @@ produce.index = ['Cost Per Pound', 'Qunatity Sold', 'Total Sales']
 
 print(produce)
 
-# 1. Produce that had the highest and lowest sales in total sales (both name of produce and value)
+print('1. Produce that had the highest and lowest sales in total sales (both name of produce and value')
+print()
 
-# 2. Using 'loc', display the quantity and total sales for 'Orange' and 'Beets' (together)
+print()
+print('2. Using loc, display the quantity and total sales for Orange and Beets (together)')
+print()
+print(produce.iloc['Orange' : 'Beets'][1:2])
+print()
+print('3. Using loc, display the total sales for Apples through Lettuce')
+print()
 
-# 3. Using 'loc', display the total sales for 'Apples' through 'Lettuce'
+print()
+print('4. Using at, update the quantity sold for Apricots to 11,955 and total sales to 44,353.05')
+print()
+print('5. What is the average quantity sold across all products? (print out ONLY quantity sold)')
+print()
 
-# 4. Using 'at', update the quantity sold for Apricots to 11,955 and total sales to 44,353.05
+print()
+print('6. Create a new dataframe for only those produce that have sold between 11,500 to 12,000 (quantity)')
+print()
 
-# 5. What is the average quantity sold across all products? (print out ONLY quantity sold)
+print()
+print('7. What is the total sales for the products in the above new dataframe? (print out ONLY total sales)')
+print()
 
-# 6. Create a new dataframe for only those produce that have sold between 11,500 to 12,000 (quantity)
-
-# 7. What is the total sales for the products in the above new dataframe? (print out ONLY total sales)
+print()
