@@ -50,11 +50,11 @@ print(produce)
 
 print('1. Produce that had the highest and lowest sales in total sales (both name of produce and value')
 print()
-
+print(produce[['Kale', 'Watermelon']][0:2])
 print()
 print('2. Using loc, display the quantity and total sales for Orange and Beets (together)')
 print()
-print(produce.iloc['Orange' : 'Beets'][1:2])
+print(produce.loc['Orange'])
 print()
 print('3. Using loc, display the total sales for Apples through Lettuce')
 print()
