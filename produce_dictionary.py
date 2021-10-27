@@ -44,31 +44,38 @@ produce_dictionary = {'Potatoes': [0.86, 12219, 10508],
 
 
 produce = pd.DataFrame(produce_dictionary)
-produce.index = ['Cost Per Pound', 'Qunatity Sold', 'Total Sales']
-
+produce.index = ['Cost Per Pound', 'Quantity Sold', 'Total Sales']
+produce = produce.T
 print(produce)
 
 print('1. Produce that had the highest and lowest sales in total sales (both name of produce and value')
 print()
-print(produce[['Kale', 'Watermelon']][0:2])
+#print(produce[['Kale', 'Watermelon']][2:3])
+print((produce.idxmin() ['Total Sales']), produce.min()['Total Sales'])
+print((produce.idxmax() ['Total Sales']), produce.max() ['Total Sales'])
 print()
 print('2. Using loc, display the quantity and total sales for Orange and Beets (together)')
 print()
-print(produce.loc['Orange'])
+print(produce.loc[['Orange' , 'Beets'], ['Quantity Sold', 'Total Sales']])
 print()
 print('3. Using loc, display the total sales for Apples through Lettuce')
 print()
-
+print(produce.loc['Apples':'Lettuce', ['Total Sales']])
 print()
 print('4. Using at, update the quantity sold for Apricots to 11,955 and total sales to 44,353.05')
 print()
+produce.at['Apricots', 'Quantity Sold'] = 11955.00
+produce.at['Apricots', 'Total Sales'] = 44353.05
+print(produce.loc[['Apricots'],['Quantity Sold', 'Total Sales']])
+print()
 print('5. What is the average quantity sold across all products? (print out ONLY quantity sold)')
 print()
-
+print(produce.mean()['Quantity Sold'])
 print()
 print('6. Create a new dataframe for only those produce that have sold between 11,500 to 12,000 (quantity)')
 print()
-
+produce2 = produce[(produce['Quantity Sold'] <= 12000) & (produce['Quantity Sold'] >= 11500)]
+print(produce2)
 print()
 print('7. What is the total sales for the products in the above new dataframe? (print out ONLY total sales)')
 print()
