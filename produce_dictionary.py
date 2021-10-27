@@ -79,5 +79,6 @@ print(produce2)
 print()
 print('7. What is the total sales for the products in the above new dataframe? (print out ONLY total sales)')
 print()
-
+print(produce2['Total Sales'])
+print('All sales for produce2 = ', produce2['Total Sales'].sum())
 print()
